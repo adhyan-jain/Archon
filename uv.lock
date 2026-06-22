@@ -30,6 +30,9 @@ wheels = [
 name = "archon"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "archon-core" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -41,6 +44,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "archon-core", editable = "packages/core" }]
 
 [package.metadata.requires-dev]
 dev = [

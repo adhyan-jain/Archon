@@ -3,12 +3,18 @@ name = "archon"
 version = "0.1.0"
 description = "Engineering intelligence engine for AI coding agents"
 requires-python = ">=3.12"
+dependencies = [
+    "archon-core",
+]
 
 [tool.uv.workspace]
 members = ["packages/*"]
 
-[tool.uv]
-dev-dependencies = [
+[tool.uv.sources]
+archon-core = { workspace = true }
+
+[dependency-groups]
+dev = [
     "pytest>=8.0",
     "pytest-asyncio>=0.23",
     "ruff>=0.4",
