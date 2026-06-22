@@ -9,12 +9,7 @@ resolution-markers = [
 [manifest]
 members = [
     "archon",
-    "archon-agent",
-    "archon-conventions",
     "archon-core",
-    "archon-graph",
-    "archon-infra",
-    "archon-intel",
 ]
 
 [[package]]
@@ -56,38 +51,6 @@ dev = [
 ]
 
 [[package]]
-name = "archon-agent"
-version = "0.1.0"
-source = { editable = "packages/agent" }
-dependencies = [
-    { name = "archon-conventions" },
-    { name = "archon-core" },
-    { name = "archon-graph" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "archon-conventions", editable = "packages/conventions" },
-    { name = "archon-core", editable = "packages/core" },
-    { name = "archon-graph", editable = "packages/graph" },
-]
-
-[[package]]
-name = "archon-conventions"
-version = "0.1.0"
-source = { editable = "packages/conventions" }
-dependencies = [
-    { name = "archon-core" },
-    { name = "archon-graph" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "archon-core", editable = "packages/core" },
-    { name = "archon-graph", editable = "packages/graph" },
-]
-
-[[package]]
 name = "archon-core"
 version = "0.1.0"
 source = { editable = "packages/core" }
@@ -97,45 +60,6 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [{ name = "pydantic", specifier = ">=2.7" }]
-
-[[package]]
-name = "archon-graph"
-version = "0.1.0"
-source = { editable = "packages/graph" }
-dependencies = [
-    { name = "archon-core" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "archon-core", editable = "packages/core" }]
-
-[[package]]
-name = "archon-infra"
-version = "0.1.0"
-source = { editable = "packages/infra" }
-dependencies = [
-    { name = "archon-core" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "archon-core", editable = "packages/core" }]
-
-[[package]]
-name = "archon-intel"
-version = "0.1.0"
-source = { editable = "packages/intel" }
-dependencies = [
-    { name = "archon-conventions" },
-    { name = "archon-core" },
-    { name = "archon-graph" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "archon-conventions", editable = "packages/conventions" },
-    { name = "archon-core", editable = "packages/core" },
-    { name = "archon-graph", editable = "packages/graph" },
-]
 
 [[package]]
 name = "ast-serialize"
